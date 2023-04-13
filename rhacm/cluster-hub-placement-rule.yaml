@@ -1,0 +1,9 @@
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: cluster-hub-placement-rule
+  namespace: acm-policies
+spec:
+  clusterSelector:
+    matchLabels:
+      local-cluster: "true"        

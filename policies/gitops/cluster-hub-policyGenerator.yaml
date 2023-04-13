@@ -1,0 +1,15 @@
+apiVersion: policy.open-cluster-management.io/v1
+kind: PolicyGenerator
+metadata:
+  name: gitops-policy-cluster-hub
+policyDefaults:
+  namespace: acm-policies
+  complianceType: musthave
+  remediationAction: enforce 
+  severity: medium
+  placement:
+    placementRuleName: cluster-hub-placement-rule
+policies:
+  - name: gitops-policy-cluster-hub
+    manifests:
+      - path: cluster-hub
